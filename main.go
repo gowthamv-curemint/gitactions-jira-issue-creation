@@ -68,6 +68,7 @@ func main() {
 					Key: jiraProject,
 				},
 				Summary: jiraIssueSummary,
+				IssueLinks: {{ID: IN-235}}
 			},
 		}
 		issue, _, err := jiraClient.Issue.Create(&i)
