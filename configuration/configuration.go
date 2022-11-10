@@ -14,6 +14,7 @@ type Config struct {
 	JiraIssueDescription string
 	JiraIssueSummary     string
 	JiraIssueAttachment  string
+	JiraIssueLinks       string
 }
 
 func (config *Config) Init() error {
@@ -64,6 +65,7 @@ func (config *Config) Init() error {
 	}
 
 	config.JiraIssueAttachment = os.Getenv("JIRA_ISSUE_ATTACHMENT")
+	config.JiraIssueLinks = os.Getenv("JIRA_ISSUE_LINKS")
 
 	return err
 }
