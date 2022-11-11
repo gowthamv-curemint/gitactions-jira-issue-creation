@@ -14,7 +14,7 @@ type Config struct {
 	JiraIssueDescription string
 	JiraIssueSummary     string
 	JiraIssueAttachment  string
-	JiraIssueLinks       string
+	JiraIssueLinks       []string
 }
 
 func (config *Config) Init() error {
