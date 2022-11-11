@@ -34,7 +34,9 @@ func main() {
 	jiraIssueAttachment := config.JiraIssueAttachment
 	jiraIssueLinks := config.JiraIssueLinks
 
-	tp := jira.BasicAuthTransport{
+	log.Fatalf("Issue Links By Me: ", jiraIssueLinks)
+
+	/* tp := jira.BasicAuthTransport{
 		Username: jiraUsername,
 		Password: jiraApiToken,
 	}
@@ -93,5 +95,5 @@ func main() {
 			result = fmt.Sprintf("%sbrowse/%s", jiraAccountUrl, string(issue.Key))
 		}
 	}
-	fmt.Printf(fmt.Sprintf("::set-output name=jira_issue_url::%s", result))
+	fmt.Printf(fmt.Sprintf("::set-output name=jira_issue_url::%s", result)) */
 }
