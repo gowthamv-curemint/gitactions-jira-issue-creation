@@ -58,6 +58,8 @@ func main() {
 		log.Printf("%+v", errors.Wrap(err, "Exception"))
 	}
 
+	log.Fatalf("Issue Links By Me: ", jiraIssueLinks)
+
 	if len(issues) == 0 {
 		i := jira.Issue{
 			Fields: &jira.IssueFields{
