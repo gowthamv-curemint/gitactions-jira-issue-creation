@@ -32,6 +32,7 @@ func main() {
 	jiraIssueSummary := config.JiraIssueSummary
 	jiraIssueDescription := config.JiraIssueDescription
 	jiraIssueAttachment := config.JiraIssueAttachment
+	jiraIssueLinks := config.JiraIssueLinks
 
 	tp := jira.BasicAuthTransport{
 		Username: jiraUsername,
@@ -68,6 +69,7 @@ func main() {
 					Key: jiraProject,
 				},
 				Summary: jiraIssueSummary,
+				IssueLinks: jiraIssueLinks,
 			},
 		}
 		issue, _, err := jiraClient.Issue.Create(&i)
